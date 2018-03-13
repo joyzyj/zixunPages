@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>资讯列表页1</title>
+</head>
+<body class="bd">
+    <div class="front">
+        <div class="container">
+            <div class="QRchar">精弘公众号</div>
+            <div class="QRimg"><img src="./img/QRcode.png" alt=""></div>
+            <div class="house"><img src="./img/house.png" alt=""></div>
+        </div>
+    </div>
+    <div class="back" id="back">
+        <div class="nav">
+            <div class="container">
+                <div class="nav-img"><a href="#"><img src="./img/black-logo.png"></a></div>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="#" id="home">Home</a></li>
+                        <li><a href="#" id="products">Products</a></li>
+                        <li><a href="#" id="company">Company</a></li>
+                        <li><a href="#" id="blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="#"><img src="./img/white-logo.png" alt=""></a>
+                </div>
+                <div class="header-building">
+                    <img src="./img/building.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="guide">
+                    <span id="g1">在</span><span id="g2">这里，</span>
+                    <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <span id="g3">你可以选择感兴趣的部门与内容类型，从而得到想要的资讯。</span>
+                </div>
+                <div class="lpart">
+                    <div class="lpart-bar">
+                        <div class="bmlb"><span>部门列表</span></div>
+                        <div class="icon1"><img src="./img/icon1.png" alt=""></div>
+                    </div>
+                    <div class="lpart-list">
+                        <table>
+                            <tr>
+                                <td class="order">A</td>
+                                <td class="college"><a href="#">计算机学院</a></td>
+                            </tr>
+                            <tr>
+                                <td class="order">B</td>
+                                <td class="college"><a href="#">信息学院</a></td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="order">C</td>
+                                <td class="college"><a href="http://baidu.com">经贸学院</a></td>
+                            </tr>
+                            <tr>
+                                <td class="order">D</td>
+                                <td class="college"><a href="#">法学院</a></td>
+                            </tr>
+                            <tr>
+                                <td class="order">E</td>
+                                <td class="college"><a href="#">政治与公共管理学院</a></td>
+                            </tr>
+                            <tr>
+                                <td class="order">F</td>
+                                <td class="college"><a href="#">人文学院</a></td>
+                            </tr>
+                            <tr>
+                                <td class="order">G</td>
+                                <td class="college"><a href="#">马克思主义学院</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="rpart">
+                    <div class="rpart-bar">
+                        <div class="xwnr">新闻内容</div>
+                        <div class="icon2"><img src="./img/icon2.png" alt=""></div>
+                        <div class="pulldown" id="app">
+                            <select v-model="selected">
+                                <option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+                            </select>
+                        </div>
+                        <div class="newest"><button>最新</button></div>
+                        <div class="hotest"><button>最热</button></div>
+
+                    </div>
+                    <div class="rpart-list">
+                        <table>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">德国亚琛工业大学Ulrich Schwaneberg教授来我校作讲座</a></td>
+                                <td class="news-source2"><a href="#">生物工程学院</a></td>
+                                <td class="news-date2">18.03.09</td>
+                            </tr>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">设计艺术学院教师张碧云“一带一路”绘画作品展在哈萨克斯坦举行</a></td>
+                                <td class="news-source2"><a href="#">设计艺术学院</a></td>
+                                <td class="news-date2">18.03.09</td>
+                            </tr>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">我校于世忠教授、石东坡教授受聘为浙江省委建设法治浙江专家咨询委员会委员</a></td>
+                                <td class="news-source2"><a href="#">法学院</a></td>
+                                <td class="news-date2">18.03.09</td>
+                            </tr>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">学校新增1家国家国际科技合作基地</a></td>
+                                <td class="news-source2"><a href="#">科学技术研究院</a><br><a href="#">建筑工程学院</a></td>
+                                <td class="news-date2">18.03.05</td>
+                            </tr>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">MBA教育中心召开校友会第三届理事会会议并举行颁奖典礼</a></td>
+                                <td class="news-source2"><a href="#">经贸管理学院</a></td>
+                                <td class="news-date2">18.03.04</td>
+                            </tr>
+                            <tr>
+                                <td class="news-type2"><span>校园新闻</span></td>
+                                <td class="news-title2"><a href="#">我校“生物催化与微生物发酵”团队入选首批“全国高校黄大年式教师团队”</a></td>
+                                <td class="news-source2"><a href="#">人事处</a><br><a href="#">生物工程学院</a></td>
+                                <td class="news-date2">18.03.02</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="contact">
+                    <div class="con-title">
+                        <span>Contact us:</span>
+                    </div>
+                    <div class="con-detail">
+                        <span>精弘qq群号：12365678</span><br>
+                        <span>负责人邮箱：xxxxx@xx.com</span>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="cpr">@ Copyright 2018 精弘网络</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js" charset="utf-8"></script>
+<script src="./js/fun1.js"></script>
+</body>
+</html>
